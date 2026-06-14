@@ -6,7 +6,7 @@ import os
 
 # Load API key
 load_dotenv()
-api_key = os.getenv("OPENROUTER_API_KEY")
+api_key = st.secrets.get("OPENROUTER_API_KEY") or os.getenv("OPENROUTER_API_KEY")
 
 # Page config
 st.set_page_config(page_title="My Chatbot", page_icon="🤖")
